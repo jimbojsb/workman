@@ -3,13 +3,13 @@ class CallbackQueueTest extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        @unlink('./artifacts/output');
+        unlink(__DIR__ . '/artifacts/output');
     }
 
     public function testCallbackQueue()
     {
         $callback = function($arg1) {
-            file_put_contents('./artifacts/output', $arg1 . "\n", FILE_APPEND);
+            file_put_contents(__DIR__ . '/artifacts/output', $arg1 . "\n", FILE_APPEND);
         };
 
         $callbackQueue = new Workman\CallbackQueue($callback);
@@ -18,7 +18,7 @@ class CallbackQueueTest extends PHPUnit_Framework_TestCase
         }
         $callbackQueue->work(5);
 
-        $lines = file('./artifacts/output');
+        $lines = file(__DIR__ . '/artifacts/output');
         $this->assertEquals(100, count($lines));
         foreach ($lines as $line) {
             $trimmedLines[] = trim($line);
@@ -29,6 +29,6 @@ class CallbackQueueTest extends PHPUnit_Framework_TestCase
 
     public function tearDown()
     {
-        @unlink('./artifacts/output');
+        unlink(__DIR__ . '/artifacts/output');
     }
 }
