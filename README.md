@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jimbojsb/workman.png?branch=master)](https://travis-ci.org/jimbojsb/workman)
+
 ```php
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
