@@ -13,5 +13,8 @@
         "psr-0": {
             "Workman": "src/"
         }
+    },
+    "require": {
+        "phpunit/phpunit": "3.7.*"
     }
 }
