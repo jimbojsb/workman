@@ -1,6 +1,5 @@
 <?php
-require_once 'src/Workman.php';
-
+require_once __DIR__ . '/src/Workman/Worker.php';
 $testCallback = function() {
     $sleepTime = mt_rand(1, 5);
     sleep($sleepTime);
