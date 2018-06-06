@@ -15,6 +15,6 @@
         }
     },
     "require": {
-        "phpunit/phpunit": "3.7.*"
+        "phpunit/phpunit": "~7.0"
     }
 }

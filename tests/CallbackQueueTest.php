@@ -1,5 +1,8 @@
 <?php
-class CallbackQueueTest extends PHPUnit_Framework_TestCase
+
+use PHPUnit\Framework\TestCase;
+
+class CallbackQueueTest extends TestCase
 {
     public function setUp()
     {
