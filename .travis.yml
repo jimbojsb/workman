@@ -1,8 +1,8 @@
 language: php
 
 php:
-  - 5.4
-  - 5.5
+  - 7.1
+  - 7.2
 
 script:
   - composer install --dev && vendor/bin/phpunit --configuration tests/phpunit.xml
