@@ -7,7 +7,7 @@ $callback = function($arg1) {
     echo getmypid() . ": " . $arg1 . "\n";
 };
 
-$callbackQueue = new Workman\CallbackQueue($callback, 3);
+$callbackQueue = new Workman\CallbackQueue($callback);
 for ($c = 0; $c < 100000; $c++) {
     $callbackQueue->push([$c]);
 }
